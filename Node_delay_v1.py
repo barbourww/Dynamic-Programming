@@ -12,7 +12,6 @@ class Node:
         self.node_id = node_id
         assert(isinstance(upstream, int)), "Can't reference null node as part of network. " \
                                "Did you mean that the value is empty []?"
-        # TODO check if parameters are integers or lists, reject if integers
         self.upstream = upstream
         assert(isinstance(downstream, int))
         self.downstream = downstream
