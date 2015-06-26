@@ -10,11 +10,10 @@ class Node:
 
     def __init__(self, node_id, upstream, downstream, delay):
         self.node_id = node_id
-        assert(isinstance(upstream, int)), "Can't reference null node as part of network. " \
+        assert(isinstance(upstream, list)), "Can't reference null node as part of network. " \
                                "Did you mean that the value is empty []?"
-        # TODO check if parameters are integers or lists, reject if integers
         self.upstream = upstream
-        assert(isinstance(downstream, int))
+        assert(isinstance(downstream, list))
         self.downstream = downstream
         self.delay = delay
 
